@@ -47,7 +47,7 @@ function Quiz() {
     if (currentQuestion) {
       setShuffledChoices(shuffleArray(currentQuestion.choices));
     }
-  }, [currentQuestionIndex]);
+  }, [currentQuestion, currentQuestionIndex]);
 
   // Chronomètre
   useEffect(() => {
