@@ -95,7 +95,7 @@ function Quiz() {
         <strong>Temps restant :</strong> {timer} sec
       </div>
       <div className="question-container">
-        <h2>  </h2>
+        <h2>{currentQuestion.question}</h2>
         <ul className="choices">
           {shuffledChoices.map((choice, index) => {
             let className = "";

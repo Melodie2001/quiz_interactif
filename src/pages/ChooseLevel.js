@@ -13,7 +13,7 @@ function ChooseLevel() {
     <div
       className="choose-level-container"
         
-    > 
+    >
       <h1>Choisissez votre niveau</h1>
       <div className="levels">
         <button className="level-btn level-easy" onClick={() => selectLevel('facile')}>
