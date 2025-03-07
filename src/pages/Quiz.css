@@ -1,0 +1,66 @@
+.quiz-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #1a1a2e;
+  color: white;
+  position: relative; /* Ajouté pour éviter les problèmes de superposition */
+}
+
+.quiz-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Effet de superposition */
+  z-index: 0;
+}
+
+.quiz-container h1,
+.timer,
+.question-container h2,
+button,
+.score {
+  z-index: 2;
+  position: relative;
+}
+
+ul.choices {
+  list-style: none;
+  padding: 0;
+  z-index: 2; /* Assure que la liste des choix est cliquable */
+  position: relative;
+}
+
+ul.choices li {
+  background: linear-gradient(90deg, #f8f8f8, #e0e0e0);
+  margin: 12px 0;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  color: black;
+  position: relative;
+}
+
+ul.choices li:hover {
+  background: #ddd;
+  transform: scale(1.05);
+}
+
+ul.choices li.correct {
+  background: linear-gradient(90deg, #28a745, #4CAF50);
+  color: white;
+}
+
+ul.choices li.incorrect {
+  background: linear-gradient(90deg, #dc3545, #e74c3c);
+  color: white;
+}
